@@ -2,8 +2,9 @@
 <img src="https://github.com/slanatech/swagger-stats/blob/master/screenshots/logo.png?raw=true" alt="swagger-stats"/>
 </p>
 
-# swagger-stats
+# swagger-stats-ext
 
+> fork from https://github.com/slanatech/swagger-stats
 
 ####  [https://swaggerstats.io](https://swaggerstats.io) | [Guide](https://swaggerstats.io/guide/) 
 

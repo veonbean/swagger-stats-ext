@@ -108,6 +108,7 @@ paths:
         |`nodejs_process_memory_external_bytes`|gauge|-|Node.js process memory external bytes|
         |`nodejs_process_cpu_usage_percentage`|gauge|-|Node.js process CPU usage percentage|
         |`api_request_total`|counter|method<br/>path<br/>code|The total number of all API requests|
+        |`mcall_request_total`|counter|service<br/>method<br/>path<br/>http_code<br/>code|The total number of all mcall based on http protocol requests|
         |`api_request_duration_milliseconds`|histogram|method<br/>path<br/>le|API requests duration|
         |`api_request_size_bytes`|histogram|method<br/>path<br/>le|API requests size|
         |`api_response_size_bytes`|histogram|method<br/>path<br/>le|API response size|
@@ -128,6 +129,11 @@ paths:
               # TYPE api_request_total counter
               api_request_total{method="GET",path="/v2/pet/{petId}",code="200"} 1
               api_request_total{method="GET",path="/v2/pet/{petId}",code="302"} 1
+              . . . .
+              # HELP mcall_request_total The total number of all mcall based on http protocol requests
+              # TYPE mcall_request_total counter
+              mcall_request_total{service="user",method="GET",path="/v2/name",http_code="200",code="0"} 1
+              mcall_request_total{service="user",method="POST",path="/v2/name/set",http_code="200",code="11061"} 1
               . . . .
               # HELP api_request_duration_milliseconds API requests duration
               # TYPE api_request_duration_milliseconds histogram
