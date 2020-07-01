@@ -1,6 +1,6 @@
 {
-  "name": "swagger-stats-ext",
-  "version": "0.95.14-2",
+  "name": "swagger-stats-ext-promise",
+  "version": "0.0.1",
   "description": "API Telemetry and APM. Trace API calls and Monitor API performance, health and usage statistics in Node.js Microservices, based on express routes and Swagger (Open API) specification",
   "main": "lib/index.js",
   "scripts": {
@@ -74,6 +74,7 @@
   "license": "MIT",
   "dependencies": {
     "basic-auth": "^2.0.0",
+    "bluebird": "^0.0.1",
     "cookies": "^0.7.1",
     "debug": "^3.1.0",
     "express-to-koa": "^2.0.0",
